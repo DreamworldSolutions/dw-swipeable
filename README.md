@@ -10,11 +10,15 @@ import '@dreamworld/dw-swipeable';
 2. Use
 ```html
 <dw-swipeable 
+  @action=${this._onAction}
   .leftAction="${{left: {name: 'DELETE', caption: 'Delete', icon: 'delete'}}", 
   .rightAction="${{name: 'DELETE', caption: 'Delete'} }" >
      <div>Content Here</div>
 </dw-swipeable>
 ```
+
+
+
 
 ## CSS Properties
 
