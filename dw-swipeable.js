@@ -349,7 +349,7 @@ class DwSwipeable extends LitElement {
       return;
     }
 
-    this.dispatchEvent(new CustomEvent('action', { detail: { name: actionName } }, { bubbles: false }));
+    this.dispatchEvent(new CustomEvent('action', { detail: { name: actionName }, bubbles: false }));
     
   }
 
