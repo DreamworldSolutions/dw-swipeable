@@ -135,10 +135,6 @@ class DwSwipeable extends LitElement {
     super.connectedCallback && super.connectedCallback();
     this.updateComplete.then(() => {
       this._content = this.shadowRoot.querySelector('.content');
-      this._content.addEventListener('touchstart', this._onTouchStart.bind(this));
-      this._content.addEventListener('touchmove', this._onTouchMove.bind(this));
-      this._content.addEventListener('touchend', this._onTouchEnd.bind(this));
-
       if (this.leftAction) {
         this._leftActionPlaceholder = this.shadowRoot.querySelector('.left-action-placeholder');
         this._leftActionPlaceholderContent = this.shadowRoot.querySelector('.left-action-placeholder .placeholder-content');
@@ -149,13 +145,6 @@ class DwSwipeable extends LitElement {
         this._rightActionPlaceholderContent = this.shadowRoot.querySelector('.right-action-placeholder .placeholder-content');
       }
     })
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback && super.disconnectedCallback();
-    this._content.removeEventListener('touchstart', this._onTouchStart);
-    this._content.removeEventListener('touchmove', this._onTouchMove);
-    this._content.removeEventListener('touchend', this._onTouchEnd);
   }
 
   static get properties() {
@@ -213,7 +202,10 @@ class DwSwipeable extends LitElement {
           </div>
         </div>` : ''}
       
-        <div class="content">
+        <div class="content" 
+          @touchstart=${this._onTouchStart} 
+          @touchmove=${this._onTouchMove} 
+          @touchend=${this._onTouchEnd}>
           <slot></slot>
         </div>
     `
