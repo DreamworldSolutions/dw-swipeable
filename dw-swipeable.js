@@ -1,5 +1,5 @@
 
-import { LitElement } from '@dw/pwa-helpers';
+import { LitElement } from '@dreamworld/pwa-helpers/lit-element.js';
 import { html, css } from 'lit-element';
 import { flexLayout } from '@dreamworld/flex-layout/flex-layout';
 import { positioning } from '@dreamworld/flex-layout/flex-layout-positioning';
