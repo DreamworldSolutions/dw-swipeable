@@ -23,8 +23,7 @@
   "dependencies": {
     "@dreamworld/flex-layout": "^1.1.0",
     "@dreamworld/material-styles": "^1.2.0",
-    "@dreamworld/pwa-helpers": "^1.3.0",
-    "@dw/pwa-helpers": "^1.3.2",
+    "@dreamworld/pwa-helpers": "^1.11.0",
     "lit-element": "^2.2.1"
   },
   "devDependencies": {
