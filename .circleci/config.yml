@@ -5,7 +5,7 @@ jobs:
       - image: circleci/node:lts
     steps:
       - checkout
-      - run: yarn install --non-ineractive
+      - run: yarn install --frozen-lockfile --non-ineractive
       - run:
           name: Deploy
           command: |
@@ -17,12 +17,11 @@ jobs:
       - image: circleci/node:lts
     steps:
       - checkout
-      - run: yarn install  --non-ineractive
+      - run: yarn install --frozen-lockfile --non-ineractive
       - run: echo "Running release job"
       - run:
           name: Deploy
           command: npx semantic-release
-
 
 workflows:
   version: 2
@@ -37,6 +36,6 @@ workflows:
       - release:
           context: Dreamworld
           filters:
-              branches:
-                only:
-                  - master
+            branches:
+              only:
+                - master
