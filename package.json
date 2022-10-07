@@ -4,7 +4,8 @@
   "description": "",
   "main": "dw-swipeable.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "wds --node-resolve --app-index demo/index.html --open --watch"
   },
   "repository": {
     "type": "git",
@@ -21,12 +22,11 @@
   },
   "homepage": "https://github.com/DreamworldSolutions/dw-swipeable#readme",
   "dependencies": {
-    "@dreamworld/flex-layout": "^1.1.0",
-    "@dreamworld/material-styles": "^1.2.0",
-    "@dreamworld/pwa-helpers": "^1.11.0",
-    "lit-element": "^2.2.1"
+    "@dreamworld/material-styles": "https://github.com/DreamworldSolutions/material-styles.git#feature/upgrade-to-lit",
+    "@dreamworld/pwa-helpers": "^1.13.1"
   },
   "devDependencies": {
+    "@web/dev-server": "^0.1.34",
     "semantic-release": "17.0.8"
   },
   "publishConfig": {
