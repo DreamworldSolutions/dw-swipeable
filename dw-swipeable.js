@@ -1,9 +1,4 @@
-
-import { LitElement } from '@dreamworld/pwa-helpers/lit-element.js';
-import { html, css } from 'lit-element';
-import { flexLayout } from '@dreamworld/flex-layout/flex-layout';
-import { positioning } from '@dreamworld/flex-layout/flex-layout-positioning';
-import { alignment } from '@dreamworld/flex-layout/flex-layout-alignment';
+import { LitElement, html, css } from '@dreamworld/pwa-helpers/lit.js';
 import { typography } from '@dreamworld/material-styles/typography';
 
 
@@ -53,9 +48,6 @@ import { typography } from '@dreamworld/material-styles/typography';
 class DwSwipeable extends LitElement {
   static get styles() {
     return [
-      flexLayout,
-      positioning,
-      alignment,
       typography,
       css`
         :host {
@@ -119,6 +111,19 @@ class DwSwipeable extends LitElement {
         .right-action-icon{
           --dw-icon-color: var(--swipe-right-placeholder-color, #FFF);
         }
+        .layout{
+          display: flex;
+        }
+        .horizontal{
+          flex-direction: row;
+        }
+        .center{
+          align-items: center;
+        }
+        .end-justified{
+          justify-content: flex-end;
+        }
+        
       `
     ];
   }
