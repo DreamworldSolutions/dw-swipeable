@@ -23,9 +23,10 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@dreamworld/material-styles@https://github.com/DreamworldSolutions/material-styles.git#feature/upgrade-to-lit":
-  version "0.0.0-development"
-  resolved "https://github.com/DreamworldSolutions/material-styles.git#e25930ad54d057308d788a5ff847eb3cbabb2639"
+"@dreamworld/material-styles@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@dreamworld/material-styles/-/material-styles-3.1.0.tgz#2c1e40e14a94860448b72a3e0ff711ae107514c8"
+  integrity sha512-EaAeHrtYxNUtvNaVGBd7Bw+gWNM9B8GJoceEMeaUxLYJJG55JPqPYM7CW99qwgWm1yaNeG8OmEjYF/D08aqUdg==
   dependencies:
     "@dreamworld/pwa-helpers" "^1.13.1"
 
@@ -33,6 +34,17 @@
   version "1.13.1"
   resolved "https://registry.yarnpkg.com/@dreamworld/pwa-helpers/-/pwa-helpers-1.13.1.tgz#825e6faf1c530591a48b6568996cdbebf8fcacc8"
   integrity sha512-/NHwoVm7cv6w1obkFYNW2ebPc//r4bzp7CjfGKHgzLaKnqt4RwY/n8nCaqzPyaJ4RJH/HnC5zYijN5g3+PhDqw==
+  dependencies:
+    bowser "^2.8.1"
+    lit "^2.3.1"
+    lit-element "^3.2.2"
+    lodash-es "^4.17.21"
+    pwa-helpers "^0.9.1"
+
+"@dreamworld/pwa-helpers@^1.14.0":
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/@dreamworld/pwa-helpers/-/pwa-helpers-1.14.0.tgz#8f98663a19913123fa252672bb17847bf38bce8f"
+  integrity sha512-27ReDHmCvQsltjVba4DacXDxyczERNSFV9mCrwEdwfEM0nAqrE8rWo1FlYx1131uMit+azkJk+gOc6ylQzxDZA==
   dependencies:
     bowser "^2.8.1"
     lit "^2.3.1"

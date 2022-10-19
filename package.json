@@ -22,8 +22,8 @@
   },
   "homepage": "https://github.com/DreamworldSolutions/dw-swipeable#readme",
   "dependencies": {
-    "@dreamworld/material-styles": "https://github.com/DreamworldSolutions/material-styles.git#feature/upgrade-to-lit",
-    "@dreamworld/pwa-helpers": "^1.13.1"
+    "@dreamworld/material-styles": "^3.1.0",
+    "@dreamworld/pwa-helpers": "^1.14.0"
   },
   "devDependencies": {
     "@web/dev-server": "^0.1.34",
