@@ -30,3 +30,4 @@ import '@dreamworld/dw-swipeable';
 | `--swipe-right-placeholder-bg-color` |  Background color of right action placeholder |
 | `--swipe-content-bg-color` |  Background color of content |
 
+ 
