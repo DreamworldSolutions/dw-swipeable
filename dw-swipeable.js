@@ -179,7 +179,12 @@ class DwSwipeable extends LitElement {
       /**
        * Input property. Time of animation. Default is 200 milliseconds.
        */
-      animationTime: { type: Number }
+      animationTime: { type: Number },
+
+      /**
+       * Input property. `true` when read only view.
+       */
+      readOnly: { type: Boolean }
     };
   }
 
@@ -274,6 +279,9 @@ class DwSwipeable extends LitElement {
    * Swipes content fully & dispatches event based on direction.
    */
   _swipe() {
+    if(this.readOnly) {
+      return;
+    }
     const direction = this._translateX < 0 ? 'LEFT' : 'RIGHT';
     const diff = this._translateX < 0 ? -(this.offsetWidth) - this._translateX : this.offsetWidth - this._translateX;
     const pixelPerFrame = Math.abs(diff / (this.animationTime * 0.06));
@@ -314,6 +322,9 @@ class DwSwipeable extends LitElement {
    * @param {Number} position Number of pixels to be swiped
    */
   _transform(position) {
+    if(this.readOnly) {
+      return;
+    }
     this._translateX = position < 0 ? Math.max(position, -(this.offsetWidth)) : Math.min(position, this.offsetWidth);
     this._scaleX = Math.max(1, Math.abs(this._translateX / 100));
     this._placeholderTextScaleX = Math.min(1, 100 / Math.abs(this._translateX));
@@ -335,6 +346,9 @@ class DwSwipeable extends LitElement {
    * Dispatches `action` event {detail: {name: {actionName}}}
    */
   _dispatchAction(action) {
+    if(this.readOnly) {
+      return;
+    }
     let actionName;
     if (action === 'LEFT' && this.leftAction) {
       actionName = this.leftAction.name;
