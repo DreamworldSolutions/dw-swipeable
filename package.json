@@ -23,7 +23,7 @@
   "homepage": "https://github.com/DreamworldSolutions/dw-swipeable#readme",
   "dependencies": {
     "@dreamworld/material-styles": "^3.1.0",
-    "@dreamworld/pwa-helpers": "^1.14.0"
+    "@dreamworld/pwa-helpers": "^3.0.2"
   },
   "devDependencies": {
     "@web/dev-server": "^0.1.34",
