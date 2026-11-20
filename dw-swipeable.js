@@ -226,6 +226,9 @@ class DwSwipeable extends LitElement {
    * @param {Object} e Event
    */
   _onTouchStart(e) {
+    if(this.readOnly) {
+      return;
+    }
     this._touchStartPoints = [e.changedTouches[0].clientX, e.changedTouches[0].clientY];
     this._touchStartTime = new Date().getTime();
   }
@@ -237,6 +240,9 @@ class DwSwipeable extends LitElement {
    * @param {Object} e Event
    */
   _onTouchMove(e) {
+    if(this.readOnly) {
+      return;
+    }
     const currentPoints = [e.changedTouches[0].clientX, e.changedTouches[0].clientY];
     const diff = [(currentPoints[0] - this._touchStartPoints[0]), (currentPoints[1] - this._touchStartPoints[1])];
     const diffX = diff[0];
@@ -258,6 +264,9 @@ class DwSwipeable extends LitElement {
    * @param {Object} e Event
    */
   _onTouchEnd(e) {
+    if(this.readOnly) {
+      return;
+    }
     if (this._translateX === undefined) {
       return;
     }
@@ -302,6 +311,9 @@ class DwSwipeable extends LitElement {
    * Resets content to it's original position.
    */
   _reset() {
+    if(this.readOnly) {
+      return;
+    }
     const direction = this._translateX < 0 ? 'LEFT' : 'RIGHT';
     const pixelPerFrame = Math.abs(this._translateX / (this.animationTime * 0.06));
     const step = () => {
